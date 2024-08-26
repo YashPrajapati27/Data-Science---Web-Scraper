@@ -3,10 +3,9 @@ import requests
 from bs4 import BeautifulSoup
 import urllib.parse
 
-# Set up the page configuration with a title and an icon
 st.set_page_config(page_title="Doctor Finder - Practo.com", page_icon="🩺")
 
-# Apply custom CSS for styling
+
 st.markdown("""
     <style>
     .main {
@@ -50,14 +49,13 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Display a header image (without class_)
+
 st.image("https://t4.ftcdn.net/jpg/02/74/73/01/360_F_274730119_ht4FXz4R6RnIJgPk7WeNALxxaf524Jrb.jpg", caption='Find the Best Doctors in Your Area', use_column_width=True)
 
-# Display the title and subtitle
 st.markdown("<div class='title'>Doctor Finder - Practo.com </div>", unsafe_allow_html=True)
 st.markdown("<div class='subtitle'>Search for doctors by location and specialization</div>", unsafe_allow_html=True)
 
-# Step 1: Create the input box for the location
+
 st.markdown(f"""
     <div style='color:#1abc9c; font-weight:bold; font-size:20px; margin-bottom:5px;'>
         Enter the location (eg. Delhi):
@@ -65,7 +63,6 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 location = st.text_input(":")
 
-# Step 2: Create a dropdown menu for specialization
 specializations = ['Dermatologist', 'Cardiologist', 'General Physician', 'Pediatrician', 'Dentist','ENT Specialist','General Physician','Gynecologist','Rheumatologist','Neurologist','Orthopedic','Hematologist','Pediatrician','Psychiatrist','Radiologist','Urologist','Oncologist']
 st.markdown(f"""
     <div style='color:#1abc9c; font-weight:bold; font-size:20px; margin-bottom:5px;'>
@@ -74,7 +71,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 specialization = st.selectbox(":", specializations)
 
-# Function to scrape doctor profiles from Practo
+
 def doctors_info(location, specialization):
     encoded_specialization = urllib.parse.quote(
         f'[{{"word":"{specialization}","autocompleted":true,"category":"subspeciality"}}]')
@@ -116,7 +113,6 @@ def doctors_info(location, specialization):
 
     return total_count, profiles
 
-# Step 3: Create a scrape button with some additional styling
 if st.button("Scrape"):
     if location and specialization:
         # Call the scraping function
@@ -128,7 +124,7 @@ if st.button("Scrape"):
     </div>
 """, unsafe_allow_html=True)
 
-        # Display each doctor's profile in a styled card
+        
         for profile in profiles:
             st.markdown(f"""
                 <div class='doctor-card'>
