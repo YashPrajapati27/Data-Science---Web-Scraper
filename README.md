@@ -54,18 +54,18 @@ To run the application locally, follow these steps:
 - **BeautifulSoup:** Used to parse HTML and extract doctor profile information.
 
 **You can install these dependencies by running:**
-
-```bash
-pip install streamlit requests beautifulsoup4
+ 
+bash
+  pip install streamlit requests beautifulsoup4
 
 
 ## Usage
 
 1. **Run the Application:**
 
-   ```bash
+   
+bash
    streamlit run app.py
-   ```
 
 2. **Access the App:**
 
