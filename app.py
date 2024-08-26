@@ -65,9 +65,6 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 location = st.text_input(":")
 
-
-
-
 # Step 2: Create a dropdown menu for specialization
 specializations = ['Dermatologist', 'Cardiologist', 'General Physician', 'Pediatrician', 'Dentist','ENT Specialist','General Physician','Gynecologist','Rheumatologist','Neurologist','Orthopedic','Hematologist','Pediatrician','Psychiatrist','Radiologist','Urologist','Oncologist']
 st.markdown(f"""
@@ -77,10 +74,8 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 specialization = st.selectbox(":", specializations)
 
-
-
 # Function to scrape doctor profiles from Practo
-def fetch_doctor_profiles(location, specialization):
+def doctors_info(location, specialization):
     encoded_specialization = urllib.parse.quote(
         f'[{{"word":"{specialization}","autocompleted":true,"category":"subspeciality"}}]')
     base_url = f"https://www.practo.com/search/doctors?results_type=doctor&q={encoded_specialization}&city={location}&page="
@@ -125,7 +120,7 @@ def fetch_doctor_profiles(location, specialization):
 if st.button("Scrape"):
     if location and specialization:
         # Call the scraping function
-        total_count, profiles = fetch_doctor_profiles(location, specialization)
+        total_count, profiles = doctors_info(location, specialization)
         st.write(f"Total number of doctors available: {total_count}")
         st.markdown(f"""
     <div style='background-color:#1abc9c; padding:10px; border-radius:5px;'>
@@ -147,8 +142,6 @@ if st.button("Scrape"):
             """, unsafe_allow_html=True)
     else:
         st.write("Please enter both location and specialization.")
-else:
-    st.write("No doctor profile found in the given loaction.")
 
 
 
