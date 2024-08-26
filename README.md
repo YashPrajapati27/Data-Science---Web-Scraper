@@ -33,8 +33,8 @@ To run the application locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/doctor-finder-practo.git
-   cd doctor-finder-practo
+   git clone https://github.com/YashPrajapati27/Data-Science---Web-Scraper
+
 2. **Create a Virtual Environment (optional but recommended):**
 
     ```bash
@@ -85,5 +85,5 @@ To run the application locally, follow these steps:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
-For any questions or feedback, please contact your-prajapatiyash2026@gmail.com
+For any questions or feedback, please contact :- prajapatiyash2026@gmail.com
 
