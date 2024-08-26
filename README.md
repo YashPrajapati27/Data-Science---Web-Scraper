@@ -55,17 +55,18 @@ To run the application locally, follow these steps:
 
 **You can install these dependencies by running:**
  
-bash
+```bash
   pip install streamlit requests beautifulsoup4
-
+```
 
 ## Usage
 
 1. **Run the Application:**
 
    
-bash
+```bash
    streamlit run app.py
+```
 
 2. **Access the App:**
 
