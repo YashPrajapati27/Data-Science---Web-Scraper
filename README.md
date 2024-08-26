@@ -45,16 +45,19 @@ To run the application locally, follow these steps:
    ```bash
    pip install -r requirements.txt
    ```
- ## Dependencies
- 
--**Streamlit:** Used to build the web application.
--**Requests:** Used to make HTTP requests to Practo.com.
--**BeautifulSoup:** Used to parse HTML and extract doctor profile information.
+# Doctor Finder - Practo.com
+
+## Dependencies
+
+- **Streamlit:** Used to build the web application.
+- **Requests:** Used to make HTTP requests to Practo.com.
+- **BeautifulSoup:** Used to parse HTML and extract doctor profile information.
 
 **You can install these dependencies by running:**
- ```bash
-  pip install streamlit requests beautifulsoup4
-   ```
+
+```bash
+pip install streamlit requests beautifulsoup4
+
 
 ## Usage
 
@@ -71,11 +74,11 @@ To run the application locally, follow these steps:
 3. **Enter the location and select the specialization, then click the "Scrape" button to fetch and display doctor profiles.**
 
 ## Code Explanation
-**app.py:** The main script containing the Streamlit application logic.
-**Page Configuration:** Sets up the page title and icon.
-**Custom CSS:** Applies custom styles to the application.
-**UI Elements:** Includes input fields for location and specialization, and a button to trigger the scraping.
-**Data Scraping:** Defines the fetch_doctor_profiles function to scrape doctor data from Practo.com and display it.
+- **app.py:** The main script containing the Streamlit application logic.
+- **Page Configuration:** Sets up the page title and icon.
+- **Custom CSS:** Applies custom styles to the application.
+- **UI Elements:** Includes input fields for location and specialization, and a button to trigger the scraping.
+- **Data Scraping:** Defines the fetch_doctor_profiles function to scrape doctor data from Practo.com and display it.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
